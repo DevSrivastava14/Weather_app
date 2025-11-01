@@ -1,0 +1,99 @@
+:root{
+  --bg: #f6fbff;
+  --card: #ffffff;
+  --accent: #2b8cff;
+  --text: #222;
+  --muted: #666;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: "Poppins", sans-serif;
+  background: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?auto=format&fit=crop&w=1400&q=80")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-color: #e6f3ff;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+
+
+/* ====== Navbar (fixed + original look) ====== */
+nav {
+  width: 100%;
+  background: rgba(101, 101, 101, 0.7); /* darker, more solid background */
+  padding: 15px 0;                /* restore original height */
+  text-align: center;
+  position: fixed;                /* stays at top even when scrolling */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.667);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00d4ff;
+}
+
+/* Add top padding to body so content doesn't hide behind navbar */
+body {
+  padding-top: 70px; /* adjust if needed */
+}
+
+.brand{font-weight:700; color:var(--accent); text-decoration:none; font-size:1.1rem}
+.nav-right a{margin-left:16px; color:var(--text); text-decoration:none}
+
+.container{max-width:900px; margin:36px auto; padding:16px}
+
+.hero{
+  background:var(--card);
+  padding:28px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(43,140,255,0.08);
+  text-align:center;
+}
+
+.search-form{margin-top:18px; display:flex; justify-content:center; gap:8px}
+.search-form input{
+  padding:10px 14px; border-radius:8px; border:1px solid #ddd; width:60%;
+}
+.search-form button{
+  padding:10px 16px; border-radius:8px; border:none; background:var(--accent); color:white; cursor:pointer;
+}
+
+.result-card{
+  background:var(--card);
+  padding:22px;
+  margin-top:20px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  text-align:center;
+}
+
+.weather-main{display:flex; align-items:center; justify-content:center; gap:28px; margin-top:8px}
+.temp img{width:80px; height:80px}
+.degrees{font-size:40px; font-weight:700}
+.details{color:var(--muted)}
+
+.back-link{display:inline-block; margin-top:14px; color:var(--accent); text-decoration:none}
+
+.footer{padding:18px; text-align:center; color:var(--muted); margin-top:40px}
+.flash-area{margin-bottom:12px}
+.flash{padding:10px 12px; border-radius:8px; margin-bottom:8px}
+.flash.warning{background:#fff3cd; color:#856404}
+.flash.danger{background:#f8d7da; color:#721c24}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home - ☀️ Weatherly{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <h1>Check the Weather Anywhere</h1>
+    <p>Enter any city name and get live weather information.</p>
+
+    <form id="search" method="POST" action="{{ url_for('weather') }}" class="search-form">
+      <input type="text" name="city" placeholder="e.g., New Delhi" required>
+      <button type="submit">Get Weather</button>
+    </form>
+  </section>
+{% endblock %}
