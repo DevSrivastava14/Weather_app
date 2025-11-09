@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()  # loads variables from .env if present
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("FLASK_SECRET", "devsecret123")  # needed for flash messages
+ # needed for flash messages
 
 API_KEY = os.environ.get("OPENWEATHER_API_KEY")  # read from environment or .env
 if not API_KEY:
